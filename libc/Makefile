@@ -1,0 +1,39 @@
+BUILDROOT ?= ..
+
+CSRCS = \
+	./string/strchr/strchr.c \
+	string/strlen/strlen.c \
+	string/strcpy/strcpy.c \
+	string/memset/memset.c \
+	string/strcat/strcat.c \
+	string/strcmp/strcmp.c \
+	string/memcpy/memcpy.c \
+	string/memcmp/memcmp.c \
+	string/memmove/memmove.c \
+	string/eat_front_whitespace/eat_front_whitespace.c \
+	string/validate_char/validate_char.c \
+	string/strstr/strstr.c \
+	stdio/printck/printck.c \
+	stdlib/itoa/itoa.c \
+	stdlib/atoi/atoi.c \
+	stdlib/strtoi/strtoi.c \
+	stdio/sprintk/sprintk.c \
+	stdio/printk/printk.c \
+	stdio/scank/scank.c \
+	stdio/getchar/getchar.c \
+	unistd/sleep/sleep.c \
+	unistd/get_opt/get_opt_count.c \
+	unistd/get_opt/get_opt.c \
+	stdlib/panik/panik.c \
+	math/powk/powk.c \
+	math/sqrtk/sqrtk.c \
+	ctype/toupper/toupper.c\
+	ctype/tolower/tolower.c\
+	ctype/isdigit/isdigit.c \
+	ctype/isalpha/isalpha.c \
+	ctype/isalnum/isalnum.c \
+	ctype/isxdigit/isxdigit.c \
+
+LIBNAME := c
+
+include $(BUILDROOT)/library.mk
