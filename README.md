@@ -8,3 +8,6 @@ this the main repository of clifterOS. this project is currently in high develop
   - **boot**: GRUB bootloader information
     - **multiboot**: GRUB multiboot information
 - **include**: all include files
+- **libc**: c library constructed and used by clifter os, non architecture aand non-platform dependant code
+- **platform**: platform dependat code
+  - **pc**: PC platform
