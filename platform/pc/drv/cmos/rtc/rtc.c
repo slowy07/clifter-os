@@ -99,7 +99,7 @@ static str_t date_to_text(uint8_t num)
 
 rtc_t rtc_get_time() {
     rtc_t curr;
-    rtc_t last;
+    rtc_t last; // keep reading time untul get the same values twice
 
     memset(&last, 0xFF, sizeof(last));
     for (curr.year = 0; memcmp(&curr, &last, sizeof(curr)); last = curr) {
