@@ -1,3 +1,5 @@
+![image](https://img.icons8.com/stickers/100/000000/graduation-cap.png)
+
 # clifter-os
 this the main repository of clifterOS. this project is currently in high development, and i predominately written in C of course ome parts such as hardware communication, scripting, building, etc ...
 
