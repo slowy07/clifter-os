@@ -21,7 +21,7 @@ int cmd_beep_handler (char *cmd) {
 struct cmd_t cmd_beep = {
   .name = "beep",
   .usage ="beep [-n milliseconds] [-f freq] [--help]",
-  .help = "beep(1) \t\t\t\t BoneOS Terminal Manual \n"
+  .help = "beep(1) \t\t\t\t ClifterOS Terminal Manual \n"
                 "NAME : \n "
                 "\tbeep\n"
                 "SYNOPSIS : \n "
