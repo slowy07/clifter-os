@@ -24,3 +24,32 @@ for now clifter os running with x86(32bit) architecture
 **building from source**
 
 first make sure you have a ubuntu terminal (if you are on windos, ue the new linux subsystem feature). then donwload the depedencie using ``bash setup.sh``. then compile the ClifterOs using make. now that you have qemu after executede ``setup.sh``, you can go ahead and run on qemu using ``make qmue_compile`` for running the binary or ``make qemu_iso`` to run the actuaal image file (ISO).
+
+## installing from source ubuntu
+
+Clone repository **ClifterOS** from git
+```
+git clone https://github.com/slowy07/clifter-os
+```
+
+After sucessfully cloning the project You can have additonal configurations to run at a specific Architecture / Platform / Compiler / etc...
+
+Look at Documentation/Options for more on this.
+
+If you choose not to have additonal options it will configure with the defaults set by Makefile ``?=`` . Now run make
+
+```
+make
+```
+
+and this will give you a sucessfull imge file (ISO) for clifterOS,if you have qemu for testing you can run
+
+```
+make qemu_compile
+```
+
+for running the binry version or the actual ISO using
+
+```
+make qemu_iso
+```

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ENVS='GENCONFIG=1'
+
+for option in "$@"
+do
+    case $option in
+    --help)
+        make configure-help
+        exit
+    ;;
+
+    --cc=*)
+        ENVS="$ENVS CC=${option#*=}"
+    ;;
+
+    --arch=*)
+        ENVS="$ENVS ARCH=${option#*=}"
+    ;;
+
+    --plat=*)
+        ENVS="$ENVS PLAT=${option#*=}"
+    ;;
+
+    *)
+        echo "unknown option $option"
+    ;;
+    esac
+done
+
+(eval "$ENVS make configure-set" && make clean >/dev/null)
