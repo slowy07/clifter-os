@@ -10,7 +10,6 @@
 #include <stdint.h>
 #include <stddef.h>
 
-
 // time driver handler
 
 struct device_driver_t pit_driver = {

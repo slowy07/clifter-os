@@ -1,7 +1,10 @@
 #include <cpu/interrupts/interrupts.h>
 #include <misc/status_codes.h>
+#include <cpu/interrupts/irq.h>
 #include <libc/stdlib/stdlib.h>
 #include <stdio/stdio.h>
+#include <drv/pcspkr/pcspkr.h>
+#include <drv/driver.h>
 #include <drv/pit/pit.h>
 #include <io/io.h>
 #include <stdint.h>
@@ -61,11 +64,11 @@ void pc_speaker_silent() {
 
 int pcspkr_beep(uint32_t freq) {
     if (pcskpr_driver.initialized == true) {
-        set_freq_pcspkr(freq);
-        uint8_t pcspkr = inb(I86_PC_SSPKR_STATUS_REG);
-        if (pcskpr != (pcskpr | I86_PC_SPKR_ENABLE))
-            // if pc speaker not already set
-            outb(0x61, pcspkr | I86_PC_SPKR_ENABLE);
+       set_freq_pcspkr(1000);
+       uint8_t tmp = inb(0x61);
+       if (tmp != (tmp | 3)) {
+           outb(0x61, tmp | 3);
+       }
     }
     else
         printk("pc speaker not initalized or uninitialized");

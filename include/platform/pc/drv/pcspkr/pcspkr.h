@@ -5,6 +5,7 @@
 #define I86_PC_SPKR_ENABLE 3
 
 #define I86_PC_SPKR_DISABLE 0xFC
+extern send_msg_counter2 (uint8_t cmd);
 
 extern int pcspkr_beep(uint32_t beep);
 extern int pcspkr_init();
